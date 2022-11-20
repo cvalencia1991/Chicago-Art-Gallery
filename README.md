@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="logo_ARTCHICAGO" alt="logo" width="140"  height="auto" />
+  <img src="logo_ARTCHICAGO.jpg" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Chicago Art Gallery</b></h3>
@@ -103,7 +103,6 @@ Install this project with:
   cd my-project
   git clone https://github.com/cvalencia1991/Chicago-Art-Gallery.git
 ```
---->
 
 ### Usage
 
@@ -201,7 +200,6 @@ If you like this project Give a ⭐️!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
