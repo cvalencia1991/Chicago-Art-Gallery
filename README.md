@@ -62,7 +62,7 @@ Chicago Art galery is a page when we implement the Art Institute of Chicago that
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](working on it)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a55f8afc-39ac-4b34-acf8-105cb74008a3/deploy-status)](https://app.netlify.com/sites/chicagoartgallery/deploys)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
