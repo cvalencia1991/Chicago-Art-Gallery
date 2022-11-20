@@ -100,8 +100,7 @@ Install this project with:
 
 
 ```sh
-  cd my-project
-  git clone https://github.com/cvalencia1991/Chicago-Art-Gallery.git
+  npm run install
 ```
 
 ### Usage
