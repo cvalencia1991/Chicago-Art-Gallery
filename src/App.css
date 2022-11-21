@@ -1,0 +1,38 @@
+
+.stylelogo{
+    width: 70px;
+    display: flex;
+}
+.Navstyle{
+    display: flex;
+    justify-content: space-around;
+}
+.backbutton{
+    display: flex;
+    align-items: center;
+}
+
+.styleMenu{
+    display: none;
+}
+.styleSearch{
+    display: flex;
+    align-items: center;
+}
+.backbutton{
+    display: flex;
+}
+
+@media screen and (min-width:768px) {
+
+    .styleMenu{
+        display: flex;
+        list-style: none;
+        gap: 1em;
+        padding: 0;
+        align-items: center;
+    }
+    .backbutton{
+        display: none;
+    }
+}
