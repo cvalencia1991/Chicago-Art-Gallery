@@ -6,6 +6,7 @@
 .Navstyle{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .backbutton{
     display: flex;
@@ -34,5 +35,40 @@
     }
     .backbutton{
         display: none;
+    }
+    .styleArtimage{
+        width: 70%;
+    }
+    .styleimages{
+        display: grid;
+        grid-template-columns:  auto auto auto;
+        gap: 10px;
+    }
+    .styleArt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        margin: 1em;
+    }
+    .styleinputsearch{
+        width: 24em;
+        border-right: none;
+        height: 2em;
+        border-bottom: 2px solid black;
+    }
+    .styleinputsearch:active{
+        border-right: none;
+        outline: none;
+    }
+    .styleinputsearch:focus{
+        border-right: none;
+        outline: none;
+    }
+    .stylesearchbutton{
+        width: 2em;
+        border-left: none;
+        height: 32.8px;
     }
 }
