@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 // Consts
@@ -11,7 +10,12 @@ export default function ChicagoGallery(state = [], action) {
     case `${GET_GALLERY}/fulfilled`:
       return action.payload;
     case SEARCH_ART:
-      return state.filter((item) => item.title.toLowerCase().includes(action.payload.toLowerCase()));
+      return state.filter((item) => {
+        if (action.payload === '') {
+          return state;
+        }
+        return item.title.toLowerCase().includes(action.payload.toLowerCase());
+      });
     default:
       return state;
   }

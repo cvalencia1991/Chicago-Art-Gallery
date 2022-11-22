@@ -1,8 +1,32 @@
-import React from 'react';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 function DetailPage() {
+  const info = useSelector((state) => state.gallery);
+  const params = useParams();
+  const newart = info.filter((art) => art.id.toString() === params.id);
   return (
-    <div>DetailPage</div>
+    <div className="styledetail">
+      {newart.map((art) => (
+        <div className="styleArtdetail" key={art.id} id={art.id}>
+          <img className="detailimag" key={art.id} src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`} alt="" />
+          <div className="styleinfodetail">
+            <div>
+              {art.artist_display}
+            </div>
+            <div>
+              {art.credit_line}
+            </div>
+            <div>
+              {art.classification_title}
+            </div>
+            <div>
+              {art.department_title}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
 

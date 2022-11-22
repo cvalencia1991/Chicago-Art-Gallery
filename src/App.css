@@ -71,4 +71,30 @@
         border-left: none;
         height: 32.8px;
     }
+    .styledetail{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .detailimag{
+        width: 30%;
+    }
+    .styleArtdetail{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+        margin: 1em;
+    }
+    .styleArtdetail{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .styleinfodetail{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }

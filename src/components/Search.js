@@ -21,7 +21,7 @@ function Search() {
 
   return (
     <form onSubmit={handleSubmit} className="styleSearch">
-      <input name="title" type="text" className="styleinputsearch" onChange={handleChange} placeholder="search by name" required />
+      <input name="title" type="text" className="styleinputsearch" onChange={handleChange} placeholder="search by name" />
       <button className="stylesearchbutton" type="submit">
         <BiSearch />
       </button>
