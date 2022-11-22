@@ -12,16 +12,11 @@ function Navbar() {
   const links = [
     {
       id: 0,
-      path: '/Details',
-      text: 'Details',
-    },
-    {
-      id: 1,
       path: '/About me',
       text: 'About me',
     },
     {
-      id: 2,
+      id: 1,
       path: '/References',
       text: 'References',
     },
