@@ -23,11 +23,6 @@ function Navbar() {
   ];
   return (
     <nav className="Navstyle">
-      <div className="backbutton">
-        {back.map((backinfo) => (
-          <Link key={backinfo.id} to={backinfo.path}>{backinfo.text}</Link>
-        ))}
-      </div>
       <div>
         {back.map((backinfo) => (
           <a key={backinfo.id} href={backinfo.path} label="link logo"><img className="stylelogo" src={logo} alt="" /></a>
