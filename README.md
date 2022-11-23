@@ -71,9 +71,14 @@ Chicago Art galery is a page when we implement the Art Institute of Chicago that
 ### Video
 
 
+
+https://user-images.githubusercontent.com/107327344/203641730-3c7d70ca-9c7f-4625-b01b-d5943027a47a.mp4
+
+
 ### Screenshot
 
-[screenshot](./src/imgs/Screenshot.jpeg)
+
+![Screenshot](https://user-images.githubusercontent.com/107327344/203641705-811bf1a2-9496-40a4-9dbd-99c678cecda1.jpeg)
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -163,9 +168,9 @@ npm run start
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ update Images ] **[when there is no images i upload a images that is going to be null]**
+- [ Update information ] **[when the information is null, its no going appear in details]**
+- [ update reference] **[Update the reference Page]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
