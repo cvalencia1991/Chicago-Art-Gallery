@@ -192,7 +192,7 @@ If you like this project Give a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- I would like to thank to Art institute of Chigago for give us the API to implement [link](https://api.artic.edu/docs/)
+- I would like to thank to Art institute of Chicago for give us the API to implement [link](https://api.artic.edu/docs/)
 
 - I would like to thank to Nelson Sakwa on Behance for inspiring me for the desing, link to go the styles [link](https://www.behance.net/gallery/40217175/De-Herstellung-IOS-Ecommerce-UI-Kit)
 
