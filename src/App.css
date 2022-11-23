@@ -84,7 +84,7 @@
   border-top: 2px solid black;
 }
 
-.styleinfodetail{
+.styleinfodetail {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,7 +175,8 @@
   .styleinfohistory {
     white-space: pre-line;
   }
-  .stylebuttonreturn{
+
+  .stylebuttonreturn {
     display: flex;
     flex-direction: column;
     align-items: center;
