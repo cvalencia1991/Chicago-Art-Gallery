@@ -21,7 +21,10 @@ function DetailPage() {
               {art.classification_title}
             </div>
             <div>
-              {art.department_title}
+              {art.exhibition_history}
+            </div>
+            <div>
+              {art.provenance_text}
             </div>
           </div>
         </div>

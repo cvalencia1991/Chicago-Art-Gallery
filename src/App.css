@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
+@font-face {
+  font-family: onkey-ligth;
+  src: url(./fonts/orkney-light.otf);
+}
+
+* {
+  font-family: onkey-ligth, sans-serif;
+  font-weight: 700;
+}
 
 .stylelogo {
   width: 70px;
@@ -8,6 +19,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .backbutton {
@@ -38,6 +50,37 @@
 .detailimag {
   width: 70%;
   margin: 2em;
+}
+
+.styleArtdetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkstyles {
+  text-decoration: none;
+  color: #d42e27;
+  font-weight: 700;
+}
+
+.linkstyles:hover {
+  text-decoration: underline;
+  text-decoration-color: #fdd005;
+}
+
+.styleinputsearch {
+  width: 15em;
+  border-right: none;
+  height: 2em;
+  border-bottom: 2px solid black;
+}
+
+.stylesearchbutton {
+  width: 2em;
+  border-left: none;
+  height: 32.8px;
+  border-top: 2px solid black;
 }
 
 @media screen and (min-width: 768px) {
@@ -119,5 +162,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+
+  .styleinfohistory {
+    white-space: pre-line;
   }
 }
