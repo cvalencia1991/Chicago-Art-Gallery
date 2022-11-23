@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function DetailPage() {
   const info = useSelector((state) => state.gallery);
@@ -21,10 +21,13 @@ function DetailPage() {
               {art.classification_title}
             </div>
             <div>
-              {art.exhibition_history}
+              {`${art.exhibition_history}`}
             </div>
             <div>
-              {art.provenance_text}
+              {`${art.provenance_text}`}
+            </div>
+            <div className="stylebuttonreturn">
+              <Link to="/"><button type="button">return</button></Link>
             </div>
           </div>
         </div>

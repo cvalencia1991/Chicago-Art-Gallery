@@ -84,6 +84,13 @@
   border-top: 2px solid black;
 }
 
+.styleinfodetail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
 @media screen and (min-width: 768px) {
   .styleMenu {
     display: flex;
@@ -167,5 +174,10 @@
 
   .styleinfohistory {
     white-space: pre-line;
+  }
+  .stylebuttonreturn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
