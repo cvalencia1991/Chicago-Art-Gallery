@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="Logo_ARTCHICAGO.jpg" alt="logo" width="140"  height="auto" />
+  <img src=".imgs/Logo_ARTCHICAGO.jpg" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Chicago Art Gallery</b></h3>
@@ -64,7 +64,16 @@ Chicago Art galery is a page when we implement the Art Institute of Chicago that
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a55f8afc-39ac-4b34-acf8-105cb74008a3/deploy-status)](https://app.netlify.com/sites/chicagoartgallery/deploys)
 
+[Live demo](https://chicagoartgallery.netlify.app/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Video
+
+
+### Screenshot
+
+[screenshot](./src/imgs/Screenshot.jpeg)
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
