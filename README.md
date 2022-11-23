@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src=".imgs/Logo_ARTCHICAGO.jpg" alt="logo" width="140"  height="auto" />
+  <img src="Logo_ARTCHICAGO.jpg" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Chicago Art Gallery</b></h3>
