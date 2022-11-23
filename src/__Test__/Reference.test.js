@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import store from '../Redux/configureStore';
+import store from '../Redux/configurestore';
 import References from '../components/References';
 
 it('renders correctly', () => {
