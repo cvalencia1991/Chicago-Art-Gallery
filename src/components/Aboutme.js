@@ -16,7 +16,7 @@ function Aboutme() {
         <li><IoLogoSkype /></li>
       </ul>
       <div className="stylebuttonreturn">
-        <Link to="/"><button type="button">return</button></Link>
+        <Link className="stylebuttonreturn" to="/"><button className="stylebuttonback" type="button">return</button></Link>
       </div>
 
     </div>

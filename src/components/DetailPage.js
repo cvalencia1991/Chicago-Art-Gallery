@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 
@@ -12,22 +13,27 @@ function DetailPage() {
           <img className="detailimag" key={art.id} src={`https://www.artic.edu/iiif/2/${art.image_id}/full/843,/0/default.jpg`} alt="" />
           <div className="styleinfodetail">
             <div>
+              <h1>{art.title}</h1>
+            </div>
+            <div>
               {art.artist_display}
             </div>
             <div>
-              {art.credit_line}
+              <h3>
+                {art.credit_line}
+              </h3>
             </div>
             <div>
               {art.classification_title}
             </div>
             <div>
-              {`${art.exhibition_history}`}
+              <p dangerouslySetInnerHTML={{ __html: art.exhibition_history }} />
             </div>
             <div>
-              {`${art.provenance_text}`}
+              <p dangerouslySetInnerHTML={{ __html: art.provenance_text }} />
             </div>
             <div className="stylebuttonreturn">
-              <Link to="/"><button type="button">return</button></Link>
+              <Link className="stylebuttonreturn" to="/"><button className="stylebuttonback" type="button">return</button></Link>
             </div>
           </div>
         </div>

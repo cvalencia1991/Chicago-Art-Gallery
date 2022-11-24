@@ -94,6 +94,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1em;
+  text-align: center;
 }
 
 .stylelinks {
@@ -110,6 +111,9 @@
   align-items: center;
 }
 
+.stylebuttonback{
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
   .Navstyle {
     flex-direction: row;
@@ -150,7 +154,8 @@
     width: 24em;
     border-right: none;
     height: 2em;
-    border-bottom: 2px solid black;
+    border: 2px solid black;
+    border-right: none;
   }
 
   .styleinputsearch:active {
@@ -165,8 +170,10 @@
 
   .stylesearchbutton {
     width: 2em;
+    border: 2px solid black;
     border-left: none;
     height: 32.8px;
+   
   }
 
   .styledetail {
@@ -193,6 +200,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: justify;
   }
 
   .styleinfohistory {
@@ -203,6 +211,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   .styleaboutme {
