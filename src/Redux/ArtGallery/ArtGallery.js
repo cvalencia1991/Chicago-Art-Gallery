@@ -3,19 +3,25 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 // Consts
 const GET_GALLERY = 'GET_GALLERY';
 const SEARCH_ART = 'SEARCH_ART';
-
+let cont = 0;
+let new2 = 0;
 // Reducer
 export default function ChicagoGallery(state = [], action) {
   switch (action.type) {
     case `${GET_GALLERY}/fulfilled`:
       return action.payload;
     case SEARCH_ART:
-      return state.filter((item) => {
-        if (action.payload === '') {
-          return state;
-        }
-        return item.title.toLowerCase().includes(action.payload.toLowerCase());
-      });
+      if (cont === 0) {
+        new2 = state;
+      }
+      cont += 1;
+      if (action.payload === '') {
+        return new2;
+      }
+      return new2.filter((item) => (
+        item.title.toLowerCase().includes(action.payload.toLowerCase())
+      ));
+
     default:
       return state;
   }
