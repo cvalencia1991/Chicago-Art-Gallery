@@ -1,13 +1,13 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { useDispatch } from 'react-redux';
-import { SearchArt } from '../Redux/ArtGallery/ArtGallery';
+import { searchArt } from '../Redux/ArtGallery/ArtGallery';
 
 function Search() {
   const dispatch = useDispatch();
-  const [title, setName] = useState({
-    title: '',
-  });
+  const [title, setName] = useState('');
+
   const handleChange = (e) => {
     setName(
       e.target.value,
@@ -16,13 +16,15 @@ function Search() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(SearchArt(title));
+    dispatch(searchArt(title));
+    setName('');
   };
 
   return (
     <form onSubmit={handleSubmit} className="styleSearch">
-      <input name="title" type="text" className="styleinputsearch" onChange={handleChange} placeholder="search by name" />
-      <button className="stylesearchbutton" type="submit">
+      <label htmlFor="title" className="stylelabelsearch" />
+      <input name="title" value={title} type="text" className="styleinputsearch" onChange={handleChange} placeholder="search by name" />
+      <button type="submit" className="stylesearchbutton">
         <BiSearch />
       </button>
     </form>

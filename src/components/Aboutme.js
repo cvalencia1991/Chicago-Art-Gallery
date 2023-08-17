@@ -1,7 +1,6 @@
 import React from 'react';
 import { GrLinkedin } from 'react-icons/gr';
 import { BsTwitter } from 'react-icons/bs';
-import { IoLogoSkype } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 function Aboutme() {
@@ -11,9 +10,16 @@ function Aboutme() {
       you can reach me!
       <p>Email:cesar4a6z@gmail.com</p>
       <ul className="stylelinks">
-        <li><GrLinkedin /></li>
-        <li><BsTwitter /></li>
-        <li><IoLogoSkype /></li>
+        <a href="https://www.linkedin.com/in/cesar-valencia-aguilar/" target="_blank" rel="noreferrer">
+          <li>
+            <GrLinkedin />
+          </li>
+        </a>
+        <a href="https://twitter.com/cvalenciaguilar" target="_blank" rel="noreferrer">
+          <li>
+            <BsTwitter />
+          </li>
+        </a>
       </ul>
       <div className="stylebuttonreturn">
         <Link className="stylebuttonreturn" to="/"><button className="stylebuttonback" type="button">return</button></Link>

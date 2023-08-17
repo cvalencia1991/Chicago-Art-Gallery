@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
 
 @font-face {
   font-family: onkey-ligth;
@@ -9,6 +8,12 @@
   font-family: onkey-ligth, sans-serif;
   font-weight: 700;
   background-color: #f7f7f7;
+}
+
+a{
+  text-decoration: none;
+  color: #d42e27;
+  font-weight: 700;
 }
 
 .stylelogo {
@@ -114,6 +119,53 @@
 .stylebuttonback{
   cursor: pointer;
 }
+
+.lds-ring {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #00000045;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #0000004f transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+.refInfo{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .Navstyle {
     flex-direction: row;

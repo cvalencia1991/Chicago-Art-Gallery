@@ -1,45 +1,56 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+/* eslint-disable consistent-return */
+/* eslint-disable max-len */
+/* eslint-disable no-param-reassign */
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-// Consts
-const GET_GALLERY = 'GET_GALLERY';
-const SEARCH_ART = 'SEARCH_ART';
-let cont = 0;
-let new2 = 0;
-// Reducer
-export default function ChicagoGallery(state = [], action) {
-  switch (action.type) {
-    case `${GET_GALLERY}/fulfilled`:
-      return action.payload;
-    case SEARCH_ART:
-      if (cont === 0) {
-        new2 = state;
+export const fetchArt = createAsyncThunk(
+  'gallery/fetchArt',
+  async () => {
+    const response = await fetch('https://api.artic.edu/api/v1/artworks?page=6&limit=50');
+    try {
+      if (response.ok) {
+        const data = await response.json();
+        return data;
       }
-      cont += 1;
-      if (action.payload === '') {
-        return new2;
-      }
-      return new2.filter((item) => (
-        item.title.toLowerCase().includes(action.payload.toLowerCase())
-      ));
+    } catch (error) {
+      throw new Error('Server Error');
+    }
+  },
+);
 
-    default:
-      return state;
-  }
-}
-
-// Actions
-export const getinfoart = createAsyncThunk(GET_GALLERY, async () => {
-  const url = 'https://api.artic.edu/api/v1/artworks?page=6&limit=50';
-  const response = await fetch(url, {
-    method: 'GET',
-    headers: {
-      'content-Type': 'application/json',
+export const ChicagoGallery = createSlice({
+  name: 'gallery',
+  initialState: {
+    art: [],
+    isloading: false,
+    hasErrors: false,
+  },
+  reducers: {
+    searchArt: (state, action) => {
+      const newart = state.art.filter((art) => art.title.toLowerCase().includes(action.payload.toLowerCase()));
+      state.art = newart;
     },
-  });
-  const result = await response.json();
-  return result.data;
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchArt.pending, (state) => {
+        state.isloading = true;
+        state.hasErrors = false;
+      })
+      .addCase(fetchArt.fulfilled, (state, action) => {
+        state.art = action.payload.data;
+        state.isloading = false;
+        state.hasErrors = false;
+      })
+      .addCase(fetchArt.rejected, (state) => {
+        state.isloading = false;
+        state.hasErrors = true;
+      });
+  },
 });
 
-export function SearchArt(obj) {
-  return { type: SEARCH_ART, payload: obj };
-}
+export const { searchArt } = ChicagoGallery.actions;
+export const selectArt = (state) => state.gallery.art;
+export const galleryIsLoading = (state) => state.gallery.isloading;
+
+export default ChicagoGallery.reducer;

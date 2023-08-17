@@ -1,10 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import ChicagoGallery from './ArtGallery/ArtGallery';
+import chicagoReducer from './ArtGallery/ArtGallery';
 
-const store = configureStore({
+export default configureStore({
   reducer: {
-    gallery: ChicagoGallery,
+    gallery: chicagoReducer,
   },
 });
-
-export default store;

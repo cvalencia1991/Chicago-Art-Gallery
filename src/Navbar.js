@@ -24,8 +24,10 @@ function Navbar() {
   return (
     <nav className="Navstyle">
       <div>
-        {back.map((backinfo) => (
-          <a key={backinfo.id} href={backinfo.path} label="link logo"><img className="stylelogo" src={logo} alt="" /></a>
+        {back.map((value) => (
+          <div key={value.id}>
+            <img className="stylelogo" src={logo} alt="" />
+          </div>
         ))}
       </div>
       <Search />

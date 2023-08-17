@@ -1,11 +1,18 @@
 /* eslint-disable react/no-danger */
 import { useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { selectArt } from '../Redux/ArtGallery/ArtGallery';
 
 function DetailPage() {
-  const info = useSelector((state) => state.gallery);
+  const info = useSelector(selectArt);
   const params = useParams();
   const newart = info.filter((art) => art.id.toString() === params.id);
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate('/');
+  };
+
   return (
     <div className="styledetail">
       {newart.map((art) => (
@@ -33,7 +40,7 @@ function DetailPage() {
               <p dangerouslySetInnerHTML={{ __html: art.provenance_text }} />
             </div>
             <div className="stylebuttonreturn">
-              <Link className="stylebuttonreturn" to="/"><button className="stylebuttonback" type="button">return</button></Link>
+              <button className="stylebuttonback" onClick={handleNavigate} type="button">return</button>
             </div>
           </div>
         </div>
