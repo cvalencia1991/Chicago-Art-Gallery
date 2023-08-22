@@ -6,7 +6,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const fetchArt = createAsyncThunk(
   'gallery/fetchArt',
   async () => {
-    const response = await fetch('https://api.artic.edu/api/v1/artworks?page=6&limit=50');
+    const response = await fetch('https://api.artic.edu/api/v1/artworks?page=6&limit=6');
     try {
       if (response.ok) {
         const data = await response.json();
