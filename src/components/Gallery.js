@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+/* eslint-disable global-require */
+import React, { useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectArt, fetchArt, galleryIsLoading } from '../Redux/ArtGallery/ArtGallery';
@@ -8,9 +9,13 @@ function Gallery() {
   const dispatch = useDispatch();
   const galleryLoading = useSelector(galleryIsLoading);
 
-  useEffect(() => {
+  const fetchArtCallback = useCallback(() => {
     dispatch(fetchArt());
   }, [dispatch]);
+
+  useEffect(() => {
+    fetchArtCallback();
+  }, [fetchArtCallback]);
 
   if (galleryLoading) {
     return (
@@ -34,7 +39,7 @@ function Gallery() {
                   <img
                     className="styleArtimage"
                     key={art.id}
-                    src="../images/noimage.jpg"
+                    src={require('../imgs/NoImageAvailable.jpg')}
                     alt={`${art.title} - ${art.artist_display}}`}
                   />
                 )
