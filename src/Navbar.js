@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Search from './components/Search';
-import logo from './imgs/Logo_ARTCHICAGO.jpg';
+import logo from './imgs/Logo.jpg';
 
 function Navbar() {
   const back = [{

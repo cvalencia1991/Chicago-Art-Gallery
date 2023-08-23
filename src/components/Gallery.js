@@ -34,7 +34,7 @@ function Gallery() {
         {info.map((art) => (
           <div className="styleArt" key={art.id} id={art.id}>
             <Link key={info.id} to={`/Details/${art.id}`}>
-              { art.image_id === null
+              { art.image_id === null || art.image_id === 2
                 ? (
                   <img
                     className="styleArtimage"
